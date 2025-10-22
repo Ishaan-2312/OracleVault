@@ -7,7 +7,7 @@ import "../src/OracleVault.sol";
 contract OracleVaultTest is Test {
 
     OracleVault vault;
-    address feed = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
+    address feed = address(uint160(uint256(keccak256("0x694AA1769357215DE4FAC081bf1f309aDC325306"))));
     
     function setUp() external{
         vault = new OracleVault(feed);
